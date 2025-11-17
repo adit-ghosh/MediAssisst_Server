@@ -94,8 +94,7 @@ All protected routes require JWT token:
   "notes": "Complete the course",
   "validUntil": "2024-12-31"
 }
-
-
+```
 ---
 
 ## API Routes
@@ -103,7 +102,7 @@ All protected routes require JWT token:
 ### Authentication Routes (`/api/auth`)
 
 | Method | Endpoint   | Description        | Body Parameters                                  |
-|--------|------------|------------------|--------------------------------------------------|
+|--------|------------|-------------------|--------------------------------------------------|
 | POST   | /register  | User registration | email, password, firstName, lastName, role       |
 | POST   | /login     | User login        | email, password                                  |
 | POST   | /refresh   | Refresh tokens    | refreshToken                                     |
@@ -137,12 +136,12 @@ All protected routes require JWT token:
 
 ### Prescription Routes (`/api/prescriptions`)
 
-| Method | Endpoint     | Description                | Role Required | Body Parameters |
-|--------|--------------|--------------------------|---------------|----------------|
-| POST   | /            | Create prescription      | Doctor        | patientId, meds[], notes, validUntil |
-| GET    | /doctor/me   | Get doctor’s prescriptions | Doctor        | - |
-| GET    | /patient/me  | Get patient’s prescriptions | Patient    | - |
-| GET    | /            | Get all prescriptions    | Chemist       | - |
+| Method | Endpoint     | Description                   | Role Required | Body Parameters |
+|--------|--------------|------------------------------|---------------|----------------|
+| POST   | /            | Create prescription           | Doctor        | patientId, meds[], notes, validUntil |
+| GET    | /doctor/me   | Get doctor’s prescriptions    | Doctor        | - |
+| GET    | /patient/me  | Get patient’s prescriptions   | Patient       | - |
+| GET    | /            | Get all prescriptions         | Chemist       | - |
 
 **Example Body**
 ```json
@@ -162,6 +161,7 @@ All protected routes require JWT token:
   "notes": "Complete the course",
   "validUntil": "2024-12-31"
 }
+```
 
-
-
+#### Read api docs at route /api-docs
+#### Further information contact developer at (`aditghosh5112005@gmail.com`)
